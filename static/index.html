@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Mes Disques</title>
+
+      <!-- Dependencies required to define custom Elements -->
+      <script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython.js" crossorigin="anonymous"></script>
+      <script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js" crossorigin="anonymous"></script>
+          
+      <script type="text/python" src="/components/components.py" id="components"></script>
+
+      <!-- -->
+      <script type="text/python" src="/js/Brython.py"></script>
+
+      <link rel="stylesheet" href="/css/index.css"/>
+
+</head>
+
+
+<body onload='brython()'>
+  <div id="table" class="table">
+    <table>
+      <caption><strong>Gestion de Disques</strong></caption>
+      <thead>
+        <th>Nom</th>
+        <th>Partition</th>
+        <th>Volume</th>
+        <th>Espace Libre</th>
+        <th>Espace Occupée</th>
+      </thead>
+      <tbody id="lignes">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="form-container">
+    <form method="post" action="traitement.php">
+    </form>
+  </div>
+
+  <div id="menu_dynamique">
+    <ul>
+        <li><a id="accueil">Accueil</a></li>
+        <li><a >Créer</a>
+            <ul>
+                <li><a id="creer">Disques</a></li>
+            </ul>
+        </li>
+        <li><a >Modifier</a>
+            <ul>
+                <li><a  id="modifier">Disques</a></li>
+            </ul>
+        </li>
+        <li><a >Supprimer</a>
+            <ul>
+                <li><a  id="Supprimer">Disques</a></li>
+            </ul>
+        </li>
+        <li><a >Chiffrer</a>
+            <ul>
+                <li><a  id="chiffre">Disques</a></li>
+            </ul>
+        </li>
+        <li><a >Déchiffrer</a>
+            <ul>
+                <li><a  id="dechiffrer">Disques</a></li>
+            </ul>
+        </li>
+        <li><a id="quitter" >Quitter</a></li>
+    </ul>
+  </div>
+
+  <dialog id="dialogue">
+    <p><strong>Création d'un nouveaux Disques :</strong></p>
+    <form method="dialog">
+      <div class="dialogue">
+        <p>
+          <label>Nom</label>
+          <input type="text" id="nom_input">
+          <label>Partition</label>
+          <input type="text" id="partition_input">
+        </p>
+        <p>
+          <label>Volume</label>
+          <input type="text" id="volume_input">
+          <label>Espace Libre</label>
+          <input type="text" id="libre_input">
+        </p>
+      </div>
+      <menu>
+        <button  class="B3">Annuler</button>
+        <button id="confirmer" class="B4" >Confirmer</button>
+      </menu>
+    </form>
+  </dialog>
+  
+  <dialog id="dialogue2">
+    <form method="dialog">
+      <p>
+        <label><strong>choisissez votre disque :</strong>
+          
+          <select id="disque_select2"> 
+            <option>Choisissez…</option>
+          </select>
+        </label>
+      </p>
+      <menu>
+        <button  class="B1">Annuler</button>
+        <button id="confirmer2" class="B2" >Confirmer</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="dialogue3">
+    <form method="dialog">
+      <p>
+        <label>
+          <strong>choisissez votre disque :</strong>
+          <select id="disque_select3">
+            <option>Choisissez…</option>
+          </select>
+        </label>
+      </p>
+      <menu>
+        <button  class="B1">Annuler</button>
+        <button id="confirmer3" class="B2" >Confirmer</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="dialogue4">
+    <form method="dialog">
+      <p>
+        <label>
+          <strong>choisissez votre disque :</strong>
+          <select id="disque_select4"> 
+            <option>Choisissez…</option>
+          </select>
+        </label>
+      </p>
+          <button  class="B1">Annuler</button>
+          <button id="confirmer4" class="B2" >Confirmer</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="dialogue5">
+    <form method="dialog">
+      <p>
+        <label>
+          <strong>choisissez votre disque :</strong>
+          <select id="disque_select5"> 
+            <option><strong>Choisissez…</strong></option>
+          </select>
+        </label>
+      </p>
+      <menu>
+        <button  class="B1">Annuler</button>
+        <button id="confirmer5" class="B2" >Confirmer</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="dialogue6">
+    <form method="dialog">
+      <div></div>
+      <label>Nom</label>
+      <input
+        type="search"
+        id="newnom"
+        placeholder="Ajouter le nouveau…"/>
+      </p>
+      <menu>
+        <p>
+          <button  class="B1">Annuler</button>
+          <button id="confirmer6" class="B2" onclick="nouveaunom()">Confirmer</button>
+        </p>
+      </menu>
+    </form>
+  </dialog>
+
+</body>
+</html>

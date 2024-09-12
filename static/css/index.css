@@ -1,0 +1,100 @@
+.table, form {
+    display: inline-block;
+}
+
+form {
+    float:right;
+}
+
+table, th, td {
+    border: 1px solid rgb(12, 11, 11);
+    
+    width:900px;
+    height:80px
+  }
+#table{
+  padding-left: 70px;
+}
+th{
+    color:black;
+    background-color:#54B6A8;
+}  
+  .form-container {
+    position: absolute;
+    top: 0px;
+    right: 20px; 
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+body {
+  background: #E8CBC0;
+  font-size: 1em;
+  background: #E8CBC0;
+  background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
+  background: linear-gradient(to right, #636FA4, #E8CBC0);
+}
+* {
+  box-sizing: border-box;
+}
+#menu_dynamique ul {
+  position: absolute;
+  top: 0px; 
+  right: 20px;
+  width: 200px;
+  list-style: none;
+  padding: 0px;
+}
+#menu_dynamique ul li {
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 15px 15px;
+  max-height: 55px;
+}
+#menu_dynamique ul li a {
+  text-decoration: none;
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+#menu_dynamique ul li:hover {
+  background: #54B6A8;
+  -moz-transition: all .8s;
+  -webkit-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s;
+}
+#menu_dynamique ul > li > ul {
+  opacity: 0;
+  display: none;
+  z-index: 999;
+  border: 1px solid #000;
+  margin-top: -35px;
+  background-color: #54B6A8;
+}
+#menu_dynamique ul li:hover > ul {
+  display: block;
+  position: relative;
+  opacity: 1;
+  margin-left: -185px;
+}
+
+dialog ,#dialogue2{
+  padding: 100px;
+  background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
+  background: linear-gradient(to right, #636FA4, #E8CBC0);
+  border: 1px solid rgb(12, 11, 11);
+  
+}
+
+
+dialog button.B1, dialog .B1 {
+  margin-right: 40px;
+}
+
+dialog button.B3, dialog .B4 {
+  margin-right: 50px;
+}
+ 
